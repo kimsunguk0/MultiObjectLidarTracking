@@ -1,0 +1,12 @@
+data/
+cmake-build-debug/
+build/
+build_*/
+.idea/
+*.log
+result.png
+result.mp4
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
