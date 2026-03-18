@@ -25,7 +25,7 @@
 
 ## Demo
 
-- MP4 demo file: [assets/hailo_tracking_demo.mp4](/home/a/sfa3d_adcm/assets/hailo_tracking_demo.mp4)
+- MP4 demo file: [assets/hailo_tracking_demo.mp4](assets/hailo_tracking_demo.mp4)
 - GitHub README에서 안정적으로 인라인 재생하려면 이 파일을 Issue/Discussion에 첨부해서 생성된 `github.com/user-attachments/...` URL로 바꿔 넣는 방식을 권장합니다.
 
 ## Pipeline
