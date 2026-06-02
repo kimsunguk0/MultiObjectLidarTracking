@@ -192,46 +192,7 @@ cd build
 
 - 루트 앱은 클래스별로 tracker를 3개 따로 돌립니다.
 - 입력 `.bin` 파일은 파일명 순으로 정렬해서 처리합니다.
-- `result.png`는 매 프레임 저장되므로 마지막 프레임 결과만 남습니다.
-- `SimpleTrack/LICENSE`는 원본 SimpleTrack의 MIT 라이선스입니다. 공개 저장소로 올릴 때는 attribution을 유지하는 편이 안전합니다.
-
-## GitHub Upload
-
-이 폴더는 현재 Git 저장소가 아니므로, 처음 올릴 때는 아래 순서로 하면 됩니다.
-
-### 1. 업로드 전 확인
-
-- `sfa.hef`를 그대로 올릴지 먼저 결정하세요.
-  - 현재 파일 크기는 GitHub 일반 업로드 한도(100MB) 안쪽이지만, 모델 배포 정책이나 라이선스 이슈가 있으면 release asset이나 Git LFS로 분리하는 편이 낫습니다.
-- `.gitignore`에는 build 산출물, 로그, `result.png`, `result.mp4`, Python cache를 제외하도록 넣어뒀습니다.
-
-### 2. 새 GitHub repo 만들고 push
-
-```bash
-cd /home/a/sfa3d_adcm
-git init
-git add .
-git commit -m "Initial import: SFA3D + SimpleTrack C++ pipeline"
-git branch -M main
-git remote add origin https://github.com/<your-id>/<repo-name>.git
-git push -u origin main
-```
-
-이미 GitHub에서 빈 repo를 만들어 둔 상태라면 위 명령 그대로 쓰면 됩니다.
-
-### 3. GitHub CLI를 쓰는 경우
-
-```bash
-cd /home/a/sfa3d_adcm
-git init
-git add .
-git commit -m "Initial import: SFA3D + SimpleTrack C++ pipeline"
-gh repo create <repo-name> --private --source=. --remote=origin --push
-```
-
-`--private` 대신 `--public`으로 바꾸면 공개 저장소로 올릴 수 있습니다.
 
 ## License
 
 - `SimpleTrack/` 원본 프로젝트는 MIT 라이선스를 따릅니다.
-- 이 저장소의 나머지 코드에 대해서는 공개 전 별도 라이선스 파일을 정리하는 것을 권장합니다.
